@@ -66,9 +66,8 @@ func main() {
 			glog.Errorf("Failed to get a list of current subscriptions, error: %s", err )
 			return
 		} else {
-			glog.Infof("responseL: %v", response)
+			glog.Infof("response: %v", response)
 		}
-
 
 		registered_url := fmt.Sprintf("http://%s:%d/callback", ip_address, options.event_port)
 		glog.Infof("Registering local events endpoint: %s", registered_url)
